@@ -11,6 +11,11 @@ class Work extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $table = 'works';
+
+    protected $casts = [
+        'technologies' => 'json',
+    ];
     protected $fillable = [
         'title',
         'description',

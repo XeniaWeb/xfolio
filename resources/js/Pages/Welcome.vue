@@ -14,53 +14,60 @@ defineProps({
 <template>
     <Head title="Welcome"/>
     <div class="relative min-h-screen bg-gray-100 dark:bg-gray-900  sm:pt-0 bg-hero-bg">
-
-        <nav class="relative flex justify-between p-4">
-            <div class="shrink-0 flex items-center px-5 py-2">
-                <Link :href="route('web-works.index')">
-                    <AppLogoXeniaWeb color-web="#44403c" color-xenia="burlywood" class="w-25 h-10"/>
-                </Link>
-            </div>
-            <div class="flex items-center">
+        <div class="container mx-auto">
+            <nav class="relative flex justify-between py-4 px-[5%] flex-wrap">
+                <div class="shrink-0 flex items-center  px-0 xl:px-5 pb-4 pt-2 sm:py-2">
+                    <Link :href="route('web-works.index')">
+                        <AppLogoXeniaWeb color-web="#44403c" color-xenia="burlywood" class="w-25 h-10"/>
+                    </Link>
+                </div>
                 <div class="flex items-center">
-                    <BreezeNavLink :href="route('web-works.index')" :active="route().current('web-works.index')" class="mr-6 ">
-                        <span class=" text-[burlywood] hover:text-yellow-200">My Works</span>
-                    </BreezeNavLink>
-                    <BreezeNavLink :href="route('page.about')" :active="route().current('page.about')" class="mr-6 text-[burlywood] ">
-                        <span class=" text-[burlywood] hover:text-yellow-200">About me</span>
-                    </BreezeNavLink>
-                    <BreezeNavLink :href="route('page.contacts')" :active="route().current('page.contacts')" class="mr-6 text-[burlywood]">
-                        <span class=" text-[burlywood] hover:text-yellow-200">Contacts</span>
-                    </BreezeNavLink>
-                </div>
-                <div class="shrink-0 flex items-center px-3">
-                    <Link  v-if="canLogin" :href="route('login')"
-                          class="text-sm text-stone-400 hover:text-stone-300 underline pr-2">
-                        Log in
-                    </Link>
-                </div>
-                <div class="shrink-0 flex items-center px-3">
+                    <div class="flex items-center">
+                        <BreezeNavLink :href="route('web-works.index')" :active="route().current('web-works.index')"
+                                       class="mr-6 ">
+                            <span class=" text-[burlywood] hover:text-yellow-200">My Works</span>
+                        </BreezeNavLink>
+                        <BreezeNavLink :href="route('page.about')" :active="route().current('page.about')"
+                                       class="mr-6 text-[burlywood] ">
+                            <span class=" text-[burlywood] hover:text-yellow-200">About me</span>
+                        </BreezeNavLink>
+                        <BreezeNavLink :href="route('page.contacts')" :active="route().current('page.contacts')"
+                                       class="mr-6 text-[burlywood]">
+                            <span class=" text-[burlywood] hover:text-yellow-200">Contacts</span>
+                        </BreezeNavLink>
+                    </div>
+                    <div class="shrink-0 flex items-center px-3">
+                        <Link v-if="canLogin" :href="route('login')"
+                              class="text-sm text-stone-400 hover:text-stone-300 underline pr-2">
+                            Log in
+                        </Link>
+                    </div>
+                    <div class="shrink-0 flex items-center px-3">
 
-                    <Link v-if="canRegister" :href="route('register')"
-                          class="text-sm text-stone-400 hover:text-stone-300 underline pr-2">
-                        Register
-                    </Link>
+                        <Link v-if="canRegister" :href="route('register')"
+                              class="text-sm text-stone-400 hover:text-stone-300 underline pr-2">
+                            Register
+                        </Link>
+                    </div>
                 </div>
+            </nav>
+            <div class=" flex justify-center items-start  xl:items-center min-h-hero">
+                <h1 class="my-8 lx:my-14 p-5 text-[burlywood] xl:text-right text-left rounded-xl text-xl sm:text-2xl  mr-auto  xl:mr-[5%] xl:ml-auto backdrop-blur backdrop-opacity-60">
+                    Great site by <strong>XeniaWeb</strong> will be here soon <br> <br>xenia1898@gmail.com
+                </h1>
             </div>
-        </nav>
-        <div class=" flex justify-center items-start  xl:items-center min-h-hero">
-            <h1 class="my-8 lx:my-14 p-5 text-[burlywood] xl:text-right text-left rounded-xl text-xl sm:text-2xl  mr-auto  xl:mr-[5%] xl:ml-auto backdrop-blur backdrop-opacity-60">
-                Great site by <strong>XeniaWeb</strong> will be here soon <br> <br>xenia1898@gmail.com
-            </h1>
         </div>
     </div>
 </template>
 
 <style scoped>
-
+.bg-hero-bg {
+    background-image: url("@@/switz08.webp");
+}
 .min-h-hero {
     min-height: calc(100vh - 110px);
 }
+
 .bg-gray-100 {
     background-color: #f7fafc;
     background-color: rgba(247, 250, 252, var(--tw-bg-opacity));

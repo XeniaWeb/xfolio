@@ -23,6 +23,11 @@ module.exports = {
                 blue: {
                     950: '#2f4c73'
                 },
+                greenGray: {
+                    light: '#a3aaa6',
+                    dark: '#868B88',
+                    intense: '#565957',
+                },
             },
         }
     },

@@ -19,14 +19,16 @@ import {Head, Link} from '@inertiajs/inertia-vue3';
             <div class="-z-50 h-full w-screen bg-gray-500 bg-contacts bg-left bg-no-repeat fixed"></div>
         </template>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-700 leading-tight">
-                My contacts
-            </h2>
+            <div class="p-4 sm:py-8">
+                <h2 class="font-bold text-2xl md:text-xl text-zinc-700 leading-tight">
+                    My contacts
+                </h2>
+            </div>
         </template>
 
         <div class="py-12">
-            <div class="flex  overflow-hidden sm:rounded-lg">
-                <div class="py-6 px-10 sm:px-12 lg:px-16">
+            <div class="flex overflow-hidden sm:rounded-lg">
+                <div class="py-6 px-10 sm:px-12 lg:px-16 text-xl md:text-base">
                     <strong>Web Development</strong>
                     <br>
                     <br>
