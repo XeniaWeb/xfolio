@@ -67,7 +67,7 @@ defineProps({
                         {{ work.description }}
                     </div>
                     <div :style="'background-image: url(\'/images/' +  work.work_image +'\')'"
-                        class="grid-image min-h-[30vh] sm:min-h-[50vh] p-4 bg-clip-padding rounded-lg work-img bg-white/90 box-border border md:border-4 border-greenGray-light/40 w-full h-auto bg-blend-luminosity hover:bg-blend-normal mb-2">
+                        class="grid-image min-h-[30vh] sm:min-h-[50vh] p-4 bg-clip-padding rounded-lg work-img bg-white/90 box-border border md:border-4 border-greenGray-light/40 w-full h-auto bg-blend-normal md:bg-blend-luminosity hover:bg-blend-normal mb-2">
                     </div>
                 </div>
             </li>

@@ -18,7 +18,7 @@ defineProps({
             <nav class="relative flex justify-between py-4 px-[5%] flex-wrap">
                 <div class="shrink-0 flex items-center  px-0 xl:px-5 pb-4 pt-2 sm:py-2">
                     <Link :href="route('web-works.index')">
-                        <AppLogoXeniaWeb color-web="#44403c" color-xenia="burlywood" class="w-25 h-10"/>
+                        <AppLogoXeniaWeb color-web="#44403c" color-xenia="burlywood" class="w-50 h-20"/>
                     </Link>
                 </div>
                 <div class="flex items-center">
