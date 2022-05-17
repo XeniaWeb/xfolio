@@ -12,7 +12,7 @@ const showingNavigationDropdown = ref(false);
 </script>
 
 <template>
-    <!--    My basic guest template without registration and login-->
+    <!--  My basic guest template -->
     <div class="overflow-hidden min-h-screen">
         <div v-if="$slots.page_background">
             <slot name="page_background"/>
@@ -29,14 +29,22 @@ const showingNavigationDropdown = ref(false);
                                 <Link :href="route('web-works.index')">
                                     <AppLogoXeniaWeb class="w-25 h-10 fill-current text-gray-500"/>
                                 </Link>
+
                             </div>
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex flex-wrap">
+                                <!--                                <div v-if="$page.props.auth.user" >-->
+                                <BreezeNavLink v-if="$page.props.auth.user" :href="route('dashboard')"
+                                               :active="route().current('dashboard')">
+                                    Dashboard
+                                </BreezeNavLink>
+                                <!--                                </div>-->
                                 <BreezeNavLink :href="route('page.about')" :active="route().current('page.about')">
                                     About&nbsp;me
                                 </BreezeNavLink>
-                                <BreezeNavLink :href="route('web-works.index')" :active="route().current('web-works.index')">
+                                <BreezeNavLink :href="route('web-works.index')"
+                                               :active="route().current('web-works.index')">
                                     Portfolio
                                 </BreezeNavLink>
                                 <BreezeNavLink :href="route('page.contacts')"
@@ -53,11 +61,41 @@ const showingNavigationDropdown = ref(false);
                                     Photo & Video
                                 </a>
                             </div>
-                            <div v-if="$slots.link_portfolio"
+                            <div v-if="!$page.props.auth.user"
                                  class="hidden md:flex mr-2 sm:-my-px ml-auto hover:bg-gray-100 sm:hover:bg-transparent">
-                                <BreezeNavLink :href="route('web-works.index') + '#worksList'">
-                                    <slot name="link_portfolio"/>
-                                </BreezeNavLink>
+                                <div v-if="$slots.link_portfolio" class="md:flex">
+                                    <BreezeNavLink :href="route('web-works.index') + '#worksList'">
+                                        <slot name="link_portfolio"/>
+                                    </BreezeNavLink>
+                                </div>
+                            </div>
+                        </div>
+                        <div v-if="$page.props.auth.user" class="hidden sm:flex sm:items-center sm:ml-6">
+                            <!-- Settings Dropdown -->
+                            <div class="ml-3 relative">
+                                <BreezeDropdown align="right" width="48">
+                                    <template #trigger>
+                                        <span class="inline-flex rounded-md">
+                                            <button type="button"
+                                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                                                {{ $page.props.auth.user.name }}
+
+                                                <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                                     viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd"
+                                                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                          clip-rule="evenodd"/>
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    </template>
+
+                                    <template #content>
+                                        <BreezeDropdownLink :href="route('logout')" method="post" as="button">
+                                            Log Out
+                                        </BreezeDropdownLink>
+                                    </template>
+                                </BreezeDropdown>
                             </div>
                         </div>
                         <!-- Hamburger -->
@@ -80,7 +118,8 @@ const showingNavigationDropdown = ref(false);
                     <!-- Responsive Navigation Menu -->
                     <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}"
                          class="sm:hidden pl-[60%]  duration-200 ease-in-out">
-                        <div class="pt-2 pb-3 space-y-1  absolute pl-[60%] w-[100vw] h-[40vh] left-0 right-0 top-56px bg-white">
+                        <div
+                            class="pt-2 pb-3 space-y-1  absolute pl-[60%] w-[100vw] h-[40vh] left-0 right-0 top-56px bg-white">
                             <BreezeResponsiveNavLink :href="route('page.about')"
                                                      :active="route().current('page.about')">
                                 About me
@@ -97,7 +136,8 @@ const showingNavigationDropdown = ref(false);
                                class="flex pl-3 pr-4 py-2 border-r-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-100 hover:border-gray-400 focus:outline-none focus:text-gray-800 focus:bg-gray-100 focus:border-gray-400 transition duration-150 ease-in-out">
                                 Blog (Ru)
                             </a>
-                            <a href="https://stock.adobe.com/ru/contributor/207527840/Oksana%20B%C3%BCrki" target="_blank"
+                            <a href="https://stock.adobe.com/ru/contributor/207527840/Oksana%20B%C3%BCrki"
+                               target="_blank"
                                class="flex pl-3 pr-4 py-2 border-r-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-100 hover:border-gray-400 focus:outline-none focus:text-gray-800 focus:bg-gray-100 focus:border-gray-400 transition duration-150 ease-in-out">
                                 Photo & Video
                             </a>

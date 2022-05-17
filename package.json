@@ -30,6 +30,8 @@
     },
     "dependencies": {
         "@heroicons/vue": "^1.0.6",
-        "@vue-hero-icons/solid": "^1.7.2"
+        "@vue-hero-icons/solid": "^1.7.2",
+        "global": "^4.4.0",
+        "yarn": "^1.22.18"
     }
 }

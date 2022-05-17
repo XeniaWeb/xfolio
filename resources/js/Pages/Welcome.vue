@@ -13,8 +13,10 @@ defineProps({
 
 <template>
     <Head title="Welcome"/>
+
     <div class="relative min-h-screen bg-gray-100 dark:bg-gray-900  sm:pt-0 bg-hero-bg">
         <div class="container mx-auto">
+
             <nav class="relative flex justify-between py-4 px-[5%] flex-wrap">
                 <div class="shrink-0 flex items-center  px-0 xl:px-5 pb-4 pt-2 sm:py-2">
                     <Link :href="route('web-works.index')">
@@ -37,14 +39,14 @@ defineProps({
                         </BreezeNavLink>
                     </div>
                     <div class="shrink-0 flex items-center px-3">
-                        <Link v-if="canLogin" :href="route('login')"
+                        <Link v-if="canLogin" :href="route('admin.login')"
                               class="text-sm text-stone-400 hover:text-stone-300 underline pr-2">
                             Log in
                         </Link>
                     </div>
                     <div class="shrink-0 flex items-center px-3">
 
-                        <Link v-if="canRegister" :href="route('register')"
+                        <Link v-if="canRegister" :href="route('admin.register')"
                               class="text-sm text-stone-400 hover:text-stone-300 underline pr-2">
                             Register
                         </Link>

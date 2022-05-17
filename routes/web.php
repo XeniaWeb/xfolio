@@ -17,14 +17,20 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
-//        'canLogin' => Route::has('login'),
-//        'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
 })->name('welcome');
 
-//Route::redirect('/', '/about', 302)->name('welcome');
+Route::get('/admin', function () {
+//    return 'admin1';
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
+});
 
 Route::inertia('/about', 'About')->name('page.about');
 Route::inertia('/contacts', 'Contacts')->name('page.contacts');
