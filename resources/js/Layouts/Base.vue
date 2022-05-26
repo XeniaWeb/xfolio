@@ -34,7 +34,7 @@ import XenTopMenu from '@/Elements/TopMenu.vue';
 <style scoped>
 .grid-base {
     display: grid;
-    grid-template-areas: "header" "main" "footer";
+    grid-template-areas: "top-menu" "main" "footer";
     grid-template-rows: auto 1fr auto;
 }
 

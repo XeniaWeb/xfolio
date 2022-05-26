@@ -26,15 +26,15 @@ defineProps({
                 <div class="flex items-center">
                     <div class="flex items-center">
                         <BreezeNavLink :href="route('web-works.index')" :active="route().current('web-works.index')"
-                                       class="mr-6 ">
+                                       class="mr-6  hover:bg-transparent hover:border-gray-500">
                             <span class=" text-[burlywood] hover:text-yellow-200">My Works</span>
                         </BreezeNavLink>
                         <BreezeNavLink :href="route('page.about')" :active="route().current('page.about')"
-                                       class="mr-6 text-[burlywood] ">
+                                       class="mr-6 text-[burlywood] hover:bg-transparent hover:border-gray-500">
                             <span class=" text-[burlywood] hover:text-yellow-200">About me</span>
                         </BreezeNavLink>
                         <BreezeNavLink :href="route('page.contacts')" :active="route().current('page.contacts')"
-                                       class="mr-6 text-[burlywood]">
+                                       class="mr-6 text-[burlywood] hover:bg-transparent hover:border-gray-500">
                             <span class=" text-[burlywood] hover:text-yellow-200">Contacts</span>
                         </BreezeNavLink>
                     </div>

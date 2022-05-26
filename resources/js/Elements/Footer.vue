@@ -7,7 +7,7 @@ import {Link} from '@inertiajs/inertia-vue3';
 </script>
 
 <template>
-    <footer class="bg-white/40 mt-auto border-t">
+    <footer class="grid-footer bg-white/40 mt-auto border-t">
         <div class="wrapper">
             <div class="relative flex justify-between py-4">
                 <div class="flex">
@@ -31,16 +31,14 @@ import {Link} from '@inertiajs/inertia-vue3';
                         </SocialLink>
                     </ul>
                 </div>
-                <div class="group block cursor-pointer sm:flex justify-center items-center py-3 align-middle">
+                <div class="group block cursor-pointer sm:flex justify-center items-center py-3 align-middle focus:outline-2 focus:outline-offset-1 focus:outline-orange-200 focus:outline-double">
                     <small class="block text-center sm:text-left py-2 mr-3 group-hover:text-blue-950/50">developed
                         by </small>
-                    <a class="cursor-pointer z-50" href="https://xeniaweb.ch/" target="_blank"
-                       title="Xenia WEB">
+                    <a class="cursor-pointer z-50focus:outline-2 focus:outline-offset-1 focus:outline-orange-200 focus:outline-double" href="https://xeniaweb.ch/" target="_blank"
+                       title="Xenia WEB" >
                         <span class="sr-only">Oksana Burki</span>
-                        <Link href="/">
                             <AppLogoXeniaWeb color-web="blue-950"
                                              class="w-auto h-12 sm:h-10 group-hover:fill-blue-950/50"/>
-                        </Link>
                     </a>
                 </div>
             </div>
@@ -50,5 +48,7 @@ import {Link} from '@inertiajs/inertia-vue3';
 </template>
 
 <style scoped>
-
+.grid-footer {
+    grid-area: footer;
+}
 </style>

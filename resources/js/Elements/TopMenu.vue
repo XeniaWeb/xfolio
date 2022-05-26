@@ -11,14 +11,14 @@ const showingNavigationDropdown = ref(false);
 </script>
 
 <template>
-    <nav class="bg-white/80 backdrop-blur-sm border-b border-gray-100">
+    <nav class="grid-top-menu bg-white/80 backdrop-blur-sm border-b border-gray-100 py-2">
         <!-- Primary Navigation Menu -->
         <div class="wrapper">
-            <div class="flex justify-between h-16">
+            <div class="flex justify-between min-h-16">
                 <div class="flex w-full">
                     <!-- Logo -->
                     <div class="shrink-0 flex items-center">
-                        <Link :href="route('web-works.index')">
+                        <Link :href="route('web-works.index')" class="focus:outline-2 focus:outline-offset-1 focus:outline-orange-200 focus:outline-double">
                             <AppLogoXeniaWeb class="w-25 h-10 fill-current text-gray-500"/>
                         </Link>
 
@@ -27,29 +27,29 @@ const showingNavigationDropdown = ref(false);
                     <!-- Navigation Links -->
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex flex-wrap">
                         <!--                                <div v-if="$page.props.auth.user" >-->
-                        <BreezeNavLink v-if="$page.props.auth.user" :href="route('dashboard')"
+                        <BreezeNavLink v-if="$page.props.auth.user" :href="route('dashboard')" class="sm:text-sm"
                                        :active="route().current('dashboard')">
                             Dashboard
                         </BreezeNavLink>
                         <!--                                </div>-->
-                        <BreezeNavLink :href="route('page.about')" :active="route().current('page.about')">
+                        <BreezeNavLink :href="route('page.about')" :active="route().current('page.about')" class="sm:text-sm">
                             About&nbsp;me
                         </BreezeNavLink>
                         <BreezeNavLink :href="route('web-works.index')"
-                                       :active="route().current('web-works.index')">
+                                       :active="route().current('web-works.index')" class="sm:text-sm">
                             Portfolio
                         </BreezeNavLink>
                         <BreezeNavLink :href="route('page.contacts')"
-                                       :active="route().current('page.contacts')">
+                                       :active="route().current('page.contacts')" class="sm:text-sm">
                             Contacts
                         </BreezeNavLink>
                         <a href="https://blog.xeniaweb.ru" target="_blank"
-                           class="flex items-center px-1 pt-1 border-b-4 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                           class="flex rounded-lg items-center px-1 pt-1 border-b-4 border-transparent text-sm md:text-base font-medium leading-5 text-gray-500 hover:text-gray-700  hover:bg-gray-50 hover:border-gray-300 focus:outline-1 focus:outline-offset-1 focus:outline-orange-100 focus:outline-double transition duration-150 ease-in-out">
                             Blog(Ru)
                         </a>
                         <a href="https://stock.adobe.com/ru/contributor/207527840/Oksana%20B%C3%BCrki"
                            target="_blank"
-                           class="flex items-center px-1 pt-1 border-b-4 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                           class="flex rounded-lg items-center px-1 pt-1 border-b-4 border-transparent text-sm  md:text-base font-medium leading-5 text-gray-500 hover:text-gray-700 hover:bg-gray-50 hover:border-gray-300 focus:outline-1 focus:outline-offset-2 focus:outline-orange-100 focus:outline-double focus:text-gray-700 transition duration-150 ease-in-out">
                             Photo & Video
                         </a>
                     </div>
@@ -143,5 +143,7 @@ const showingNavigationDropdown = ref(false);
 
 
 <style scoped>
-
+.grid-top-menu {
+    grid-area: top-menu;
+}
 </style>

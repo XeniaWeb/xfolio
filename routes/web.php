@@ -22,14 +22,31 @@ Route::get('/', function () {
     ]);
 })->name('welcome');
 
-Route::get('/admin', function () {
-//    return 'admin1';
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+//Route::get('/admin', function () {
+////    return 'admin1';
+//    return Inertia::render('Welcome', [
+//        'canLogin' => Route::has('login'),
+//        'canRegister' => Route::has('register'),
+//        'laravelVersion' => Application::VERSION,
+//        'phpVersion' => PHP_VERSION,
+//    ]);
+//});
+
+Route::middleware(['auth'])
+    ->prefix('admin')
+    ->as('admin.')
+    ->group(function () {
+        Route::resource('/works', App\Http\Controllers\Admin\WorkController::class);
+        Route::resource('/technologies', App\Http\Controllers\Admin\TechnologyController::class);
+        Route::resource('/categories', App\Http\Controllers\Admin\CategoryController::class);
+
+        Route::group([
+            'prefix' => 'settings',
+            'as' => 'settings.'
+        ], function () {
+            Route::get('appearance', [App\Http\Controllers\Admin\Settings\AppearanceController::class, 'index'])->name('appearance');
+            Route::put('appearance', [App\Http\Controllers\Admin\Settings\AppearanceController::class, 'update'])->name('update');
+        });
 });
 
 Route::inertia('/about', 'About')->name('page.about');
@@ -40,4 +57,4 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
