@@ -1,32 +1,42 @@
 <script setup>
 import XenAdminBaseLayout from '@/Layouts/AdminBase';
+import XenSaidNavLink from '@/Components/SaidNavLink';
 import {Head} from '@inertiajs/inertia-vue3';
-</script>
 
+defineProps({
+    technologies: Object,
+});
+</script>
 <template>
     <Head title="Technologies"/>
+<!--    <pre>{{ technologies }}</pre>-->
 
     <XenAdminBaseLayout>
         <template #page_background>
             <div class="-z-50 h-full w-screen bg-gray-500 bg-dashboard bg-left-top bg-no-repeat fixed"></div>
         </template>
         <template #header>
-            <div class="p-4 sm:py-8 bg-white rounded-lg">
                 <h2 class="font-bold text-2xl md:text-xl text-zinc-700 leading-tight">
                     List of Technologies
                 </h2>
-            </div>
+        </template>
+        <template #rightBlock>
+                <XenSaidNavLink :href="route('admin.technologies.create')" class="bg-gray-50 border-b-3 border-b-gray-200 py-2">
+                    Add Technology
+                </XenSaidNavLink>
         </template>
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <!--                    <div class="p-6 bg-white border-b border-gray-200">-->
-                    <!--                        You're logged in!-->
-                    <!--                    </div>-->
-                    <p>
-                        Здесь будет список технологий от админа
-                    </p>
+                    <!-- Список технологий от админа-->
+                    <div class="bg-green-400/40">
+                        <ul id="technologiesList">
+                            <li v-for="technology in technologies" :key="technology.key"  class="mb-2">
+                                {{ technology.title }}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

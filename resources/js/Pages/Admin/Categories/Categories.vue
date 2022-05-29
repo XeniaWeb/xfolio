@@ -1,6 +1,11 @@
 <script setup>
 import XenAdminBaseLayout from '@/Layouts/AdminBase';
+import XenSaidNavLink from '@/Components/SaidNavLink';
 import {Head} from '@inertiajs/inertia-vue3';
+
+defineProps({
+    categories: Object,
+});
 </script>
 
 <template>
@@ -17,16 +22,23 @@ import {Head} from '@inertiajs/inertia-vue3';
                 </h2>
             </div>
         </template>
+        <template #rightBlock>
+            <XenSaidNavLink :href="route('admin.categories.create')" class="bg-gray-50 border-b-3 border-b-gray-200 py-2">
+                Add Category
+            </XenSaidNavLink>
+        </template>
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <!--                    <div class="p-6 bg-white border-b border-gray-200">-->
-                    <!--                        You're logged in!-->
-                    <!--                    </div>-->
-                    <p>
-                        Здесь будет список категорий от админа
-                    </p>
+                    <!-- Список категорий от админа-->
+                    <div class="bg-orange-200/40">
+                        <ul id="categoriesList">
+                            <li v-for="category in categories" :key="category.key" class="mb-2">
+                                {{ category.title }}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,13 +1,12 @@
 <script setup>
 import XenBaseLayout from '@/Layouts/Base.vue';
-import BreezeButton from '@/Components/Button.vue';
+import BreezeButton from '@/Components/Buttons/Button.vue';
 import {ChevronDoubleDownIcon, ExternalLinkIcon} from '@heroicons/vue/solid'
 import {ArrowUpIcon} from '@heroicons/vue/solid'
 import {Head, Link} from '@inertiajs/inertia-vue3';
 
 defineProps({
     works: Object,
-    menu: Object,
 });
 
 </script>
@@ -33,11 +32,7 @@ defineProps({
                 </h2>
             </div>
         </template>
-        <div class="">
-            <BreezeButton class="ml-4" :class="bg-red-100">
-                Add Work
-            </BreezeButton>
-        </div>
+
         <ul>
             <li v-for="work in works" class="mb-4">
                 <div class="sm:pb-12 sm:pt-0 grid-work min-h-[60vh]">

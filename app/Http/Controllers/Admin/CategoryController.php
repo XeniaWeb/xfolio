@@ -15,8 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $technologies = Category::all();
-        return inertia('Admin/Categories/Categories', compact('technologies'));
+        $categories = Category::all();
+        return inertia('Admin/Categories/Categories', compact('categories'));
     }
 
     /**
@@ -26,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return inertia('Admin/Categories/AddCategory');
     }
 
     /**
@@ -37,7 +37,15 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category = new Category();
+
+        $category->title = $request->get('title');
+        $category->key = $request->get('key');
+        $category->comment = $request->get('comment');
+        $category->save();
+
+        return redirect()->route('admin.categories.index')->withSuccess(['Category' . $category->title . ' added successfully!']);
+
     }
 
     /**

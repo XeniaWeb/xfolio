@@ -29,6 +29,7 @@ import XenSaidNavLink from '@/Components/SaidNavLink.vue';
                                 </XenSaidNavLink>
                                 <XenSaidNavLink :href="route('admin.technologies.index')"
                                                 :active="route().current('admin.technologies.index')">
+<!--                                    route().current('admin.technologies.index'),-->
                                     Technologies
                                 </XenSaidNavLink>
                                 <XenSaidNavLink :href="route('admin.categories.index')"
@@ -42,12 +43,15 @@ import XenSaidNavLink from '@/Components/SaidNavLink.vue';
                             </div>
                         </nav>
                     </div>
-                    <div class="grid-info rounded-lg bg-white/60">
+                    <div class="grid-info rounded-lg bg-white/60 p-4 sm:p-6">
                         <!-- Page Heading -->
-                        <div class="">
+                        <div class="mb-2 bg-white/80 rounded-lg flex justify-between items-center">
                             <header v-if="$slots.header">
                                 <slot name="header"/>
                             </header>
+                            <div v-if="$slots.rightBlock" class="">
+                                <slot name="rightBlock" />
+                            </div>
                         </div>
                         <slot/>
                     </div>

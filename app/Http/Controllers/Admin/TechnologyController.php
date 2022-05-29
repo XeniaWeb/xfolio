@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreTechnology;
 use App\Models\Technology;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,7 @@ class TechnologyController extends Controller
      */
     public function create()
     {
-        //
+        return inertia('Admin/Technologies/AddTech');
     }
 
     /**
@@ -35,9 +36,17 @@ class TechnologyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreTechnology $request)
     {
-        //
+        $tech = new Technology();
+
+        $tech->title = $request->get('title');
+        $tech->key = $request->get('key');
+        $tech->comment = $request->get('comment');
+        $tech->save();
+
+        return redirect()->route('admin.technologies.index')->withSuccess(['message' =>'Technology' . $tech->title . ' added successfully!']);
+
     }
 
     /**
