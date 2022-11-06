@@ -64,7 +64,7 @@ defineProps({
 
 <style scoped>
 .bg-hero-bg {
-    background-image: url("@@/switz08.webp");
+    background-image: url("/images/switz08.webp");
 }
 .min-h-hero {
     min-height: calc(100vh - 110px);

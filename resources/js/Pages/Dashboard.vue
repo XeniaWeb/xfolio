@@ -1,7 +1,5 @@
 <script setup>
-// import XenBaseLayout from '@/Layouts/Base.vue';
-import XenAdminBaseLayout from '@/Layouts/AdminBase';
-import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue';
+import XenAdminBaseLayout from '@/Layouts/AdminBase.vue';
 import {Head} from '@inertiajs/inertia-vue3';
 </script>
 
@@ -40,7 +38,7 @@ import {Head} from '@inertiajs/inertia-vue3';
     background-color: #757575;
     background-image:
         /*linear-gradient(to left, transparent 25%, rgba(255, 255, 255, 0.7) 98%),*/ /*linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0.7) 15%, transparent),*/
-        url('@@/bg-bayern5.jpg');
+        url('/images/bg-bayern5.jpg');
     opacity: 0.2;
 }
 </style>

@@ -1,15 +1,15 @@
 <script setup>
 import BreezeButton from '@/Components/Buttons/Button.vue';
 import XenButtonDanger from '@/Components/Buttons/ButtonDanger.vue';
-import XenTextArea from '@/Components/TextArea';
-import XenAdminBaseLayout from '@/Layouts/AdminBase';
-import XenSaidNavLink from '@/Components/SaidNavLink';
+import XenTextArea from '@/Components/TextArea.vue';
+import XenAdminBaseLayout from '@/Layouts/AdminBase.vue';
+import XenSaidNavLink from '@/Components/SaidNavLink.vue';
 import BreezeInput from '@/Components/Input.vue';
 import BreezeLabel from '@/Components/Label.vue';
 import BreezeValidationErrors from '@/Components/ValidationErrors.vue';
 import {Head, Link, useForm} from '@inertiajs/inertia-vue3';
 import {Inertia} from "@inertiajs/inertia";
-import Input from "@/Components/Input";
+import Input from "@/Components/Input.vue";
 
 const form = useForm({
     title: '',
@@ -104,7 +104,7 @@ const submit = () => {
 <style scoped>
 .bg-dashboard {
     background-color: #757575;
-    background-image: /*linear-gradient(to left, transparent 25%, rgba(255, 255, 255, 0.7) 98%),*/ /*linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0.7) 15%, transparent),*/ url('@@/bg-bayern5.jpg');
+    background-image: /*linear-gradient(to left, transparent 25%, rgba(255, 255, 255, 0.7) 98%),*/ /*linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0.7) 15%, transparent),*/ url('/images/bg-bayern5.jpg');
     opacity: 0.2;
 }
 input[type='file' i],

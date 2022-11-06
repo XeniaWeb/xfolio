@@ -47,6 +47,6 @@ import {Head, Link} from '@inertiajs/inertia-vue3';
 .bg-contacts {
     /*background-color:  #757575;*/
     background-image: /*linear-gradient(to left, transparent 25%, rgba(255,255,255, 0.7) 98%),*/ linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0.7) 15%, transparent),
-    url('@@/bg-bayern3.jpg');
+    url( '/images/bg-bayern3.jpg');
 }
 </style>

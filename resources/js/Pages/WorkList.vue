@@ -43,7 +43,7 @@ defineProps({
                     <ul class="grid-back flex flex-col justify-between bg-white/70 rounded-lg p-6 mb-2">
                         <li class="pb-6 text-greenGray-intense">
                             <h3 class="font-bold pb-2 text-xl md:text-base">Used technologies: </h3>
-                            <p class="px-2 md:max-w-[35%]">{{ work.technologies.toString().replace(/[,]/g, ', ') }}
+                            <p v-if="work.technologies" class="px-2 md:max-w-[35%]">{{ work.technologies.toString().replace(/[,]/g, ', ') }}
                             </p>
                         </li>
                         <li class="italic flex justify-between flex-wrap md:block">
@@ -68,7 +68,8 @@ defineProps({
                     <div class="z-10 grid-desc  min-h-[50px] p-6 text-white bg-greenGray-light/90 rounded-lg mb-2">
                         {{ work.description }}
                     </div>
-                    <div :style="'background-image: url(\'/images/' +  work.work_image +'\')'"
+<!--                    <div :style="'background-image: url(\'/images/' +  work.work_image +'\')'"-->
+                    <div :style="'background-image: url(\'' +  work.work_image +'\')'"
                         class="grid-image min-h-[30vh] sm:min-h-[50vh] p-4 bg-clip-padding rounded-lg work-img bg-white/90 box-border border md:border-4 border-greenGray-light/40 w-full h-auto bg-blend-normal md:bg-blend-luminosity hover:bg-blend-normal mb-2">
                     </div>
                 </div>
@@ -122,7 +123,7 @@ defineProps({
 }
 
 /*.bg-w1 {*/
-/*    background-image: url('@@/work1.jpg');*/
+/*    background-image: url('/images/work1.jpg');*/
 /*    background-size: cover;*/
 /*}*/
 </style>

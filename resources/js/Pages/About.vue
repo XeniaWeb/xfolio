@@ -46,7 +46,7 @@ import {Head, Link} from '@inertiajs/inertia-vue3';
                     </div>
 
                     <div class="grid-photo w-full lg:h-auto rounded-lg  mx-auto">
-                        <img src="@@/1.jpg" alt="Photo" class="block mx-auto w-[100%] max-w-[400px] text-center rounded-lg">
+                        <img src="/images/1.jpg" alt="Photo" class="block mx-auto w-[100%] max-w-[400px] text-center rounded-lg">
                     </div>
                 </div>
         </div>
@@ -91,7 +91,7 @@ import {Head, Link} from '@inertiajs/inertia-vue3';
     background-color: #757575;
     background-image:
         /*linear-gradient(to left, transparent 25%, rgba(255, 255, 255, 0.7) 98%),*/ /*linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0.7) 15%, transparent),*/
-        url('@@/bg-bayern5.jpg');
+        url('/images/bg-bayern5.jpg');
     opacity: 0.7;
 }
 
@@ -100,7 +100,7 @@ import {Head, Link} from '@inertiajs/inertia-vue3';
 }
 
 .bg-w1 {
-    background-image: url('@@/work1.jpg');
+    background-image: url('/images/work1.jpg');
     background-size: cover;
 }
 </style>

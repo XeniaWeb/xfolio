@@ -58,13 +58,13 @@ class WorkController extends Controller
         $work->description = $request->get('description');
         $work->link = $request->get('link');
         $work->github_link = $request->get('github_link');
+        $work->comment = $request->get('comment');
 //        $work->technologies = $request->get('technologies');
         $work->save();
 
         if ($card) {
             $work->update(['work_image' => $card]);
         }
-
         return redirect()->route('admin.works.index')->withSuccess(['message' => 'Work' . $work->title . ' added successfully!']);
     }
 
