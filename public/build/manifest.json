@@ -24,7 +24,7 @@
       "resources/js/Pages/WorkList.vue"
     ],
     "css": [
-      "assets/app.4f26026c.css"
+      "assets/app.2ae2913e.css"
     ]
   },
   "resources/js/Pages/About.vue": {
@@ -346,16 +346,8 @@
     ]
   },
   "resources/js/app.css": {
-    "file": "assets/app.4f26026c.css",
+    "file": "assets/app.2ae2913e.css",
     "src": "resources/js/app.css"
-  },
-  "ChevronDoubleDownIcon.css": {
-    "file": "assets/ChevronDoubleDownIcon.3c3d9f5b.css",
-    "src": "ChevronDoubleDownIcon.css"
-  },
-  "resources/js/Pages/Admin/Categories/AddCategory.css": {
-    "file": "assets/AddCategory.d65a15b6.css",
-    "src": "resources/js/Pages/Admin/Categories/AddCategory.css"
   },
   "TopMenu.css": {
     "file": "assets/TopMenu.409a31d4.css",
@@ -365,45 +357,53 @@
     "file": "assets/AdminBase.1b63cdb6.css",
     "src": "AdminBase.css"
   },
-  "resources/js/Pages/WorkList.css": {
-    "file": "assets/WorkList.30e1ed6e.css",
-    "src": "resources/js/Pages/WorkList.css"
-  },
-  "resources/js/Pages/Contacts.css": {
-    "file": "assets/Contacts.88ba4be1.css",
-    "src": "resources/js/Pages/Contacts.css"
-  },
-  "resources/js/Pages/About.css": {
-    "file": "assets/About.462ead0e.css",
-    "src": "resources/js/Pages/About.css"
-  },
-  "resources/js/Pages/Dashboard.css": {
-    "file": "assets/Dashboard.f2eca40b.css",
-    "src": "resources/js/Pages/Dashboard.css"
+  "resources/js/Pages/Admin/Technologies/AddTech.css": {
+    "file": "assets/AddTech.2c8cb9f3.css",
+    "src": "resources/js/Pages/Admin/Technologies/AddTech.css"
   },
   "resources/js/Pages/Admin/Categories/Categories.css": {
     "file": "assets/Categories.a5f70b17.css",
     "src": "resources/js/Pages/Admin/Categories/Categories.css"
   },
-  "resources/js/Pages/Admin/Settings/Appearance.css": {
-    "file": "assets/Appearance.3984e294.css",
-    "src": "resources/js/Pages/Admin/Settings/Appearance.css"
-  },
   "resources/js/Pages/Admin/Technologies/Technologies.css": {
     "file": "assets/Technologies.4a5ca511.css",
     "src": "resources/js/Pages/Admin/Technologies/Technologies.css"
   },
-  "resources/js/Pages/Admin/Works/AddWork.css": {
-    "file": "assets/AddWork.9d2358ab.css",
-    "src": "resources/js/Pages/Admin/Works/AddWork.css"
+  "resources/js/Pages/Admin/Settings/Appearance.css": {
+    "file": "assets/Appearance.3984e294.css",
+    "src": "resources/js/Pages/Admin/Settings/Appearance.css"
   },
   "resources/js/Pages/Admin/Works/Works.css": {
     "file": "assets/Works.a9ab8337.css",
     "src": "resources/js/Pages/Admin/Works/Works.css"
   },
-  "resources/js/Pages/Admin/Technologies/AddTech.css": {
-    "file": "assets/AddTech.2c8cb9f3.css",
-    "src": "resources/js/Pages/Admin/Technologies/AddTech.css"
+  "resources/js/Pages/Contacts.css": {
+    "file": "assets/Contacts.88ba4be1.css",
+    "src": "resources/js/Pages/Contacts.css"
+  },
+  "ChevronDoubleDownIcon.css": {
+    "file": "assets/ChevronDoubleDownIcon.3c3d9f5b.css",
+    "src": "ChevronDoubleDownIcon.css"
+  },
+  "resources/js/Pages/Dashboard.css": {
+    "file": "assets/Dashboard.f2eca40b.css",
+    "src": "resources/js/Pages/Dashboard.css"
+  },
+  "resources/js/Pages/Admin/Works/AddWork.css": {
+    "file": "assets/AddWork.9d2358ab.css",
+    "src": "resources/js/Pages/Admin/Works/AddWork.css"
+  },
+  "resources/js/Pages/WorkList.css": {
+    "file": "assets/WorkList.30e1ed6e.css",
+    "src": "resources/js/Pages/WorkList.css"
+  },
+  "resources/js/Pages/About.css": {
+    "file": "assets/About.462ead0e.css",
+    "src": "resources/js/Pages/About.css"
+  },
+  "resources/js/Pages/Admin/Categories/AddCategory.css": {
+    "file": "assets/AddCategory.d65a15b6.css",
+    "src": "resources/js/Pages/Admin/Categories/AddCategory.css"
   },
   "resources/js/Pages/Welcome.css": {
     "file": "assets/Welcome.1dd35728.css",
