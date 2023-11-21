@@ -3,7 +3,7 @@ import XenBaseLayout from '@/Layouts/Base.vue';
 import BreezeButton from '@/Components/Buttons/Button.vue';
 import {ChevronDoubleDownIcon, ExternalLinkIcon} from '@heroicons/vue/solid'
 import {ArrowUpIcon} from '@heroicons/vue/solid'
-import {Head, Link} from '@inertiajs/inertia-vue3';
+import {Head, Link} from '@inertiajs/vue3';
 
 defineProps({
     works: Object,

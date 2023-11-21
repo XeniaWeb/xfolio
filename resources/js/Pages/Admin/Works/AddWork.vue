@@ -7,8 +7,8 @@ import XenSaidNavLink from '@/Components/SaidNavLink.vue';
 import BreezeInput from '@/Components/Input.vue';
 import BreezeLabel from '@/Components/Label.vue';
 import BreezeValidationErrors from '@/Components/ValidationErrors.vue';
-import {Head, Link, useForm} from '@inertiajs/inertia-vue3';
-import {Inertia} from "@inertiajs/inertia";
+import {Head, Link, useForm} from '@inertiajs/vue3';
+import {Inertia} from "@inertiajs/vue3";
 import Input from "@/Components/Input.vue";
 
 const form = useForm({

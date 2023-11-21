@@ -1,7 +1,7 @@
 <script setup>
 import XenAdminBaseLayout from '@/Layouts/AdminBase.vue';
 import XenSaidNavLink from '@/Components/SaidNavLink.vue';
-import {Head} from '@inertiajs/inertia-vue3';
+import {Head} from '@inertiajs/vue3';
 
 defineProps({
     technologies: Object,

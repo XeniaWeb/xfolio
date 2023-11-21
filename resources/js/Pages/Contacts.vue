@@ -1,7 +1,7 @@
 <script setup>
 import XenBaseLayout from '@/Layouts/Base.vue';
 import {ChevronDoubleDownIcon} from '@heroicons/vue/solid'
-import {Head, Link} from '@inertiajs/inertia-vue3';
+import {Head, Link} from '@inertiajs/vue3';
 
 </script>
 
